@@ -24,4 +24,4 @@ class ReviewsSpider(scrapy.Spider):
 
         next_page = response.xpath("//a[text()='Next page']/@href").get()
         if next_page:
-            yield scrapy.Request(f'https://www.amazon.com{next_page}')
+            yield scrapy.Request(url = f'https://www.amazon.com{next_page}')
